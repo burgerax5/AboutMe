@@ -1,7 +1,23 @@
-body{
-    color:black;
+@font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
 }
 
-h2{
-    color: blue;
+body{
+    background-color:black;
+    color: white;
+    font-family: minecraft;
+}
+
+button{
+    font-size: 60px;
+    font-family: minecraft;
+    color:white;
+    border: 4px solid white;
+    background-color: black;
+}
+
+button:hover{
+    background-color:white;
+    color:black;
 }
