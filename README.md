@@ -6,9 +6,9 @@
 - [ ] Create Projects Page
 
 ## Home Page
-- [ ] Title
-- [ ] Short Description About Myself
-- [ ] Project Button
+- [x] Title
+- [x] Short Description About Myself
+- [x] Project Button
 - [ ] Format Page
 
 ## Projects Page
