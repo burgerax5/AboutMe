@@ -1,5 +1,5 @@
 # AboutMe
- A little project I'll be working on during my mid-semester break to relearn how to use GitHub.
+ A little project I'll be working on during my free time.
 
 # Goals
 - [ ] Create Home Page
