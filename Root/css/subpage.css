@@ -1,0 +1,84 @@
+.grid-container {
+    color:black;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "l-side main r-side"
+    "footer footer footer";
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 20% 60% 20%;
+    padding: 0 25px;
+  }
+
+  .nav{
+      grid-area: nav;
+  }
+
+  .header{
+    grid-area: header;
+    text-align: center;
+  }
+
+  .header-inner{
+      display:flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+  }
+
+  span.subtitle{
+      display: inline;
+      background-color: #2b2b2b;
+      color:white;
+      padding: 0.5rem;
+      font-size: larger;
+  }
+
+  .left{
+      grid-area: l-side;
+  }
+
+  .main{
+      grid-area: main;
+  }
+
+  .right{
+      grid-area: r-side;
+  }
+
+  .footer{
+      grid-area: footer;
+  }
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+.menu{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hamburger1, .hamburger2, .hamburger3{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/*Hamburger Animation*/
+.menu.open .hamburger1{
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menu.open .hamburger2{
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu.open .hamburger3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}

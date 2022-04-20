@@ -8,6 +8,8 @@ body{
     margin:0;
     min-height: 100%;
     background-color:#25b17b;
+    min-width: 582px;
+    min-height: 100vh;
 }
 
 ul{
@@ -16,65 +18,3 @@ ul{
     padding: 0;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 25vw auto auto;
-    grid-template-rows: 20vh 80vh;
-    gap: 10px;
-  }
-  
-.grid-container > div {
-    padding: 20px 0;
-    font-size: 30px;
-}
-
-.menu{
-    grid-column: 1/span 1;
-    grid-row: 1/span 2;
-    background-color: #2b2b2b;
-}
-
-.title{
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 1;
-    font-size: 60pt;
-    color:white;
-}
-
-.menu-items{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 2;
-    color:white;
-}
-
-.btn{
-    grid-column: 3/ span 1;
-    grid-row: 2/ span 1;
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-
-    background-color: none;
-    border: 3px solid white;
-    color:white;
-}
-
-.list-spacing{
-    line-height: 150%;
-}
-
-a{
-    text-decoration: none;
-    color:white;
-}
-
-.icons{
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-}
-
-.icon{
-    width: 5vw;
-    height: auto;
-}
