@@ -3,9 +3,10 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 897.59px;
+    max-width: 1122px;
 }
 
 p{
     font-size: 16px;
+    overflow-wrap: break-word;
 }

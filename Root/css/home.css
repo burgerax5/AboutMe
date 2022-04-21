@@ -41,6 +41,10 @@
     color:white;
 }
 
+.btn:hover{
+    background-color: #2b2b2b;
+}
+
 .list-spacing{
     line-height: 150%;
 }
