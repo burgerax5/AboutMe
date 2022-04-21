@@ -33,8 +33,7 @@
 }
 
 .sidebar{
-    display:none;
-    width: 300px;
+    width: 0px;
     height:100vh;
     background-color: #2b2b2b;
     position: fixed;
@@ -43,7 +42,7 @@
     z-index: 1;
     overflow: hidden;
     padding: 10% 0;
-    transition: left 0.4s;
+    transition: 0.3s;
 }
 
 .sidebar-item{
@@ -113,4 +112,9 @@ a{
 .menu.open .hamburger3{
     background-color: white;
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*Sidebar Animation*/
+.sidebar a{
+    transition: 0.3s;
 }

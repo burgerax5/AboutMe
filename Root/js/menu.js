@@ -6,11 +6,11 @@ menuBtn.addEventListener('click', () => {
     if(!menuOpen){
         menuBtn.classList.add('open');
         menuOpen = true;
-        sidebar.style.display = 'block';
+        sidebar.style.width = '25%';
     }
     else{
         menuBtn.classList.remove('open');
         menuOpen = false;
-        sidebar.style.display = 'none';
+        sidebar.style.width = '0px';
     }
 });
