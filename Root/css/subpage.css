@@ -3,7 +3,7 @@
     height: 100vh;
     display: grid;
     grid-template-areas:
-    "header header header"
+    "nav header header"
     "l-side main r-side"
     "footer footer footer";
     grid-template-rows: 10% 80% 10%;
@@ -11,54 +11,17 @@
     padding: 0 25px;
   }
 
-  .nav{
-      grid-area: nav;
-  }
-
-  .header{
-    grid-area: header;
-    text-align: center;
-  }
-
-  .header-inner{
-      display:flex;
-      align-items: center;
-      justify-content: space-evenly;
-      width: 100%;
-  }
-
-  span.subtitle{
-      display: inline;
-      background-color: #2b2b2b;
-      color:white;
-      padding: 0.5rem;
-      font-size: larger;
-  }
-
-  .left{
-      grid-area: l-side;
-  }
-
-  .main{
-      grid-area: main;
-  }
-
-  .right{
-      grid-area: r-side;
-  }
-
-  .footer{
-      grid-area: footer;
-  }
-
-a{
-    color:black;
-    text-decoration: none;
+.nav{
+    grid-area: nav;
+    z-index: 3;
 }
 
 .menu{
     display: inline-block;
+    position: relative;
     cursor: pointer;
+    margin: 25px;
+    z-index: 2;
 }
 
 .hamburger1, .hamburger2, .hamburger3{
@@ -69,8 +32,76 @@ a{
     transition: 0.4s;
 }
 
+.sidebar{
+    display:none;
+    width: 300px;
+    height:100vh;
+    background-color: #2b2b2b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10% 0;
+    transition: left 0.4s;
+}
+
+.sidebar-item{
+    color:white;
+    display: block;
+    padding: 1em 25%;
+    align-items: center;
+}
+
+.sidebar-item:hover{
+    background-color: black;
+    color:white;
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+}
+
+.header-inner{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+span.subtitle{
+    display: inline;
+    background-color: #2b2b2b;
+    color:white;
+    padding: 0.5rem;
+    font-size: larger;
+}
+
+.left{
+    grid-area: l-side;
+}
+
+.main{
+    grid-area: main;
+}
+
+.right{
+    grid-area: r-side;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
 /*Hamburger Animation*/
 .menu.open .hamburger1{
+    background-color: white;
     transform: rotate(-45deg) translate(-9px, 6px);
 }
 
@@ -80,5 +111,6 @@ a{
 }
 
 .menu.open .hamburger3{
+    background-color: white;
     transform: rotate(45deg) translate(-8px, -8px);
 }
