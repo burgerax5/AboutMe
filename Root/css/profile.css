@@ -1,0 +1,11 @@
+.profile-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 897.59px;
+}
+
+p{
+    font-size: 16px;
+}

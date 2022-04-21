@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/subpage.css">
+    <link rel="stylesheet" href="css/profile.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>burgerax3 - Profile</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="nav">
+            <!--Visible Only When Display Width <= 1280px-->
             <div class="menu">
                 <div class="hamburger1"></div>
                 <div class="hamburger2"></div>
@@ -24,11 +26,32 @@
                 </ul>
             </div>
         </div>
+        <!--Visible Only When Display Width > 1280px-->
+        <div class="lg-sidebar">
+            <ul>
+                <li><a href="index.html" class="lg-sidebar-item">HOME</a></li>
+                <li><a href="profile.html" class="lg-sidebar-item">PROFILE</a></li>
+                <li><a href="projects.html" class="lg-sidebar-item">PROJECTS</a></li>
+                <li><a href="contact.html" class="lg-sidebar-item">CONTACT</a></li> 
+            </ul>
+            <div class="lg-sidebar-icons">
+                <a href="https://discord.gg/D9JYv5e"><img class="lg-sidebar-icon" src="img/discord.png" alt="Discord Server"></a>
+                <a href="https://github.com/burgerax5"><img class="lg-sidebar-icon" src="img/github.png" alt="GitHub Profile"></a>
+            </div>
+        </div>
         <div class="header">
             <div class="header-inner">
                 <a href="index.html"><h1>burgerax3</h1></a>
                 <span class="subtitle">PROFILE</span>
             </div>
+        </div>
+        <!--Profile Content-->
+        <div class="main">
+            <img src="img/gojo.jpg" class="profile-img" alt="Gojo Satoru from JJK 0"/>
+            <h1 style="padding-bottom:50px">About Me</h1>
+            <p>My name is Trevor and I'm currently a student studying Computer Science in the University of Auckland.</p>
+            <p>I'm hoping that by studying Computer Science along with programming during my free time, I will have improved my skills enough so that by the time I graduate, I will be able
+                to get a job.</p>
         </div>
     </div>
 </body>

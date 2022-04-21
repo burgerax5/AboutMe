@@ -1,3 +1,8 @@
+body{
+    min-height: 852px;
+    min-width: 582px;
+}
+
 .grid-container {
     color:black;
     height: 100vh;
@@ -17,6 +22,7 @@
 }
 
 .menu{
+    visibility: hidden;
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -81,8 +87,43 @@ span.subtitle{
     grid-area: l-side;
 }
 
+.lg-sidebar{
+    width: 150px;
+    height:100vh;
+    background-color: #2b2b2b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.lg-sidebar-item{
+    display: block;
+    color:white;
+    padding: 1em 10%;
+}
+
+.lg-sidebar-item:hover{
+    background-color: black;
+}
+
+.lg-sidebar-icons{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.lg-sidebar-icon{
+    display: block;
+    width: 3vw;
+    height: auto;
+    margin: 1rem 2rem;
+}
+
 .main{
     grid-area: main;
+    text-align: center;
 }
 
 .right{
@@ -117,4 +158,15 @@ a{
 /*Sidebar Animation*/
 .sidebar a{
     transition: 0.3s;
+}
+
+/*When the display is less than or equal to 1280px in width, it will display the hamburger menu*/
+@media screen and (max-width: 1280px) {
+    .menu {
+        visibility: visible;
+    }
+
+    .lg-sidebar{
+        width: 0px;
+    }
 }
