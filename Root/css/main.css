@@ -56,15 +56,15 @@ main{
     position: fixed;
     background-color: var(--bg-main);
     overflow: visible;
+    z-index: 3;
 }
 
 .navbar-nav{
+    display: grid;
     list-style: none;
     padding: 0;
     margin: 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template: repeat(4, 96px) / 96px auto;
 }
 
 .nav-item{
@@ -77,8 +77,37 @@ main{
     height: 3rem;
     text-decoration: none;
     color: var(--bg-light); 
-    text-align: center;
     transition: 0.3s ease;
+}
+
+.expand-link{
+    width: 0; /*0px --> auto upon hovering its corresponding nav-link*/
+    height: 0; /*0px --> auto upon hovering its corresponding nav-link*/
+    overflow: hidden;
+    text-align: left;
+    padding: 0 30px;
+    background-color: var(--accent-main);
+    color: var(--bg-main);
+}
+
+#expand-home.open{
+    width: 10rem;
+    height: auto;
+}
+
+#expand-profile.open{
+    width: 10rem;
+    height: auto;
+}
+
+#expand-projects.open{
+    width: 10rem;
+    height: auto;
+}
+
+#expand-contact.open{
+    width: 10rem;
+    height: auto;
 }
 
 .nav-link:hover{

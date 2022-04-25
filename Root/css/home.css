@@ -47,3 +47,13 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 1024px){
+    .burgerax3 h1{
+        font-size: 15vw;
+    }
+
+    li{
+        padding: 10px 0;
+    }
+}
