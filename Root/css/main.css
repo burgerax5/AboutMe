@@ -1,16 +1,16 @@
 @font-face {
-    font-family: vcr;
+    font-family: 'vcr';
     src: url(../fonts/VCR_OSD_MONO.ttf);
 }
 
 :root{
     font-size: 24pt;
-    font-family: vcr;
+    font-family: 'vcr';
     --bg-main: #2b2b2b;
-    --bg-light: #9c9c9c;
+    --bg-light: #6d6d6d;
     --bg-darker: #1e1e1e;
-    --accent-main: #00ffa8;
-    --accent-dark:#5ba161;
+    --accent-main: #01d68f;
+    --accent-dark:#1ba175;
     --accent-darker: #3d6641;
 
 }
@@ -18,7 +18,6 @@
 body{
     background-image: url(../img/xiao_bg.jpg);
     background-color: var(--bg-main);
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -28,17 +27,12 @@ body{
 }
 
 body::-webkit-scrollbar{
-    width: 0.3rem;
-}
-
-body::-webkit-scrollbar-track{
-    background: #2b2b2b;
-    border-radius: 10px;
+    background: var(--bg-light);
+    width: 0.17rem;
 }
 
 body::-webkit-scrollbar-thumb{
     background: var(--accent-dark);
-    border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb:hover{
@@ -81,33 +75,65 @@ main{
 }
 
 .expand-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 0; /*0px --> auto upon hovering its corresponding nav-link*/
     height: 0; /*0px --> auto upon hovering its corresponding nav-link*/
     overflow: hidden;
     text-align: left;
-    padding: 0 30px;
+    padding: 0 0px;
     background-color: var(--accent-main);
     color: var(--bg-main);
+    transition: 0.4s;
 }
 
 #expand-home.open{
-    width: 10rem;
+    width: 8rem;
     height: auto;
+    padding: 0 30px;
+}
+
+#expand-home.close{
+    width: 0rem;
+    height: auto;
+    padding: 0 0px;
 }
 
 #expand-profile.open{
-    width: 10rem;
+    width: 8rem;
     height: auto;
+    padding: 0 30px;
+}
+
+#expand-profile.close{
+    width: 0;
+    height: auto;
+    padding: 0 0px;
 }
 
 #expand-projects.open{
-    width: 10rem;
+    width: 8rem;
     height: auto;
+    padding: 0 30px;
+}
+
+#expand-projects.close{
+    width: 0;
+    height: auto;
+    padding: 0 0;
 }
 
 #expand-contact.open{
-    width: 10rem;
+    width: 8rem;
     height: auto;
+    padding: 0 30px;
+}
+
+#expand-contact.close{
+    width: 0;
+    height: auto;
+    padding: 0 0;
 }
 
 .nav-link:hover{
@@ -133,6 +159,7 @@ h1{
 
     main{
         margin: 0;
+        padding: 0;
     }
 
     .flex-container{
@@ -140,5 +167,6 @@ h1{
         align-items: center;
         text-align: center;
     }
+    
 }
 

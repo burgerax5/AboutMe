@@ -1,7 +1,19 @@
 @import url(./main.css);
 
 body{
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/xiao_bg.jpg');
+    background: var(--bg-darker);
+}
+
+.flex-container{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+h1{
+    margin-left: 35%;
 }
 
 .headerbar{
@@ -16,7 +28,7 @@ header{
 }
 
 .nav-m-btn{
-    visibility: hidden;
+    display: none;
     position: relative;
     margin-bottom: 5px;
     cursor: pointer;
@@ -64,11 +76,15 @@ ul{
 
 @media only screen and (max-width: 1024px){
     .nav-m-btn{
-        visibility: visible;
+        display: block;
         overflow: hidden;
     }
     .nav-m-overlay{
         visibility: visible;
+    }
+    
+    h1{
+        margin-left: 0;
     }
 }
 
