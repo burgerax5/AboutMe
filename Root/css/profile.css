@@ -81,6 +81,7 @@ hr{
     border: 1px solid var(--accent-dark);
     height: 100%;
     width: 90%;
+    cursor: pointer;
 }
 
 .item-img{
@@ -103,6 +104,12 @@ hr{
     display: none;
     text-align: center;
     position: relative;
+    width: 100%
+}
+
+.item-overlay-content h3{
+    font-size: small;
+    overflow-wrap: break-word;
 }
 
 .item:hover .item-overlay{
@@ -124,5 +131,16 @@ hr{
 
     .flex-container{
         flex-direction: column;
+    }
+}
+
+@media (max-width: 325px) {
+    .item-overlay{
+        display: none;
+        overflow: hidden;
+    }
+
+    .item-overlay-content{
+        display: none;
     }
 }
