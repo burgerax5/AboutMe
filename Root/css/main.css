@@ -27,16 +27,16 @@ body{
 }
 
 body::-webkit-scrollbar{
-    background: var(--bg-light);
-    width: 0.17rem;
+    background: var(--bg-main);
+    width: 0.3rem;
 }
 
 body::-webkit-scrollbar-thumb{
-    background: var(--accent-dark);
+    background: var(--accent-main);
 }
 
 body::-webkit-scrollbar-thumb:hover{
-    background: var(--accent-darker);
+    background: var(--accent-dark);
 }
 
 main{

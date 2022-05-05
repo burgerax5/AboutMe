@@ -1,1 +1,66 @@
-@import url(./main.css);
+@import url('./main.css');
+
+.flex-container{
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.contact-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.contact-item{
+    border: 1px solid var(--accent-main);
+    display: inline-flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.contact-icon{
+    width: 20%;
+    background-color: var(--accent-dark);
+    text-align: center;
+    min-width: 100px;
+}
+
+.contact-icon img{
+    object-fit: contain;    
+    width: 100%;
+    height: auto;
+}
+
+.contact-details{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.details-title{
+    font-size: larger;
+}
+
+.details-text{
+    padding-top: 10px;
+    font-size: large;
+    color: grey;
+}
+
+@media (max-width: 768px){
+    .contact-list{
+        grid-template-columns: 1fr;
+    }
+
+    .details-text{
+        font-size: medium;
+    }
+
+    .contact-details{
+        font-size: large;
+    }
+}
