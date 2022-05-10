@@ -1,97 +1,69 @@
-@import url('./main.css');
-
-.flex-container{
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+@font-face {
+    font-family: minecraft;
+    src: url('Minecraft.ttf');
 }
 
 .contact-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
     width: 100%;
 }
 
-.contact-item{
+.contact-list-item{
     border: 1px solid var(--bg-light);
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    padding: 20px;
-    max-height: 200px;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+    transition: 0.4s ease;
+    text-decoration: none;
+    color: white;
 }
 
-.contact-item:hover{
-    border: 1px solid var(--accent-main);
+.contact-list-item:hover{
+    border: 1px solid var(--accent-dark);
     cursor: pointer;
-    background-color: var(--bg-main);
-    transition: 0.5s;
+    background-color: rgb(49, 49, 49);
 }
 
-.contact-icon{
-    width: 128px;
+.contact-list-item:hover .contact-list-item-img-box img{
+    filter: invert(65%) sepia(40%) saturate(4148%) hue-rotate(145deg) brightness(100%) contrast(99%);
+}
+
+.contact-list-item-img-box{
+    grid-column: 1/2;
     height: 128px;
+    width: auto;
+    justify-self: center;
 }
 
-.contact-details{
+.contact-list-item-info-box{
+    height: 100%;
+    border-left: 2px solid var(--bg-light);
+    grid-column: 2/5;
+}
+
+.contact-list-item-info-text{
+    text-align: left;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-}
-
-.details-title{
-    font-size: larger;
-    text-align: left;
     overflow-wrap: break-word;
 }
 
-.details-text{
-    padding-top: 10px;
-    font-size: large;
+.contact-list-item-info-text .description{
     color: grey;
-    text-align: left;
-    overflow-wrap: break-word;
+    font-size: 65%;
+    font-family: minecraft;
 }
 
-/*Small Display*/
-@media (max-width: 1024px){
+@media only screen and (max-width: 1024px){
     .contact-list{
         grid-template-columns: 1fr;
-    }
-
-    .details-text{
-        font-size: medium;
-    }
-
-    .details-title{
-        font-size: large;
-    }
-
-    .contact-icon{
-        width: 100px;
-        height: 100px;
+        grid-template-rows: repeat(6, 1fr);
     }
 }
 
-/*Very Small Display*/
-@media (max-width: 350px){
-    .contact-list{
-        grid-template-columns: 1fr;
-    }
-
-    .details-text{
-        font-size: small;
-    }
-
-    .details-title{
-        font-size: medium;
-    }
-
-    .contact-icon{
-        width: 70px;
-        height: 70px;
-    }
-}
