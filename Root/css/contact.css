@@ -60,10 +60,79 @@
     font-family: minecraft;
 }
 
+.modal{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-color: var(--bg-main);
+    padding: 20px;
+    width: 35%;
+    height: auto;
+    gap: 30px;
+}
+
+.modal-link{
+    color: grey;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-btn{
+    outline: none;
+    border: none;
+    font-family: vcr;
+    outline: none;
+    width: 30%;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#yesBtn{
+    background-color: var(--accent-main);
+}
+
+#yesBtn:hover{
+    background-color: var(--accent-darker);
+}
+
+#noBtn{
+    background-color: var(--bg-darker);
+}
+
+#noBtn:hover{
+    background-color: var(--bg-light);
+}
+
 @media only screen and (max-width: 1024px){
     .contact-list{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
+        width: 80%;
+    }
+
+    .modal-link{
+        overflow: scroll;
     }
 }
 

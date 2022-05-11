@@ -73,6 +73,18 @@
             </header>
         </div>
         <div class="flex-container">
+            <!-- Popup Modal Upon Pressing Contact List Item-->
+            <div class="modal" id="contactModal">
+                <div class="modal-content">
+                    <span class="modal-title">Do you wish to leave this site?</span>
+                    <span class="modal-link" id="modalLink">URL goes here.</span>
+                    <div class="buttons">
+                        <button class="modal-btn" id="yesBtn">Yes</button>
+                        <button class="modal-btn" id="noBtn">No</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="contact-list">
                 <a class="contact-list-item" id="steamLink">
                     <div class="contact-list-item-img-box">
@@ -135,7 +147,6 @@
                 </a>
             </div>
         </div>
-        <br><br><br>
     </main>
 </body>
 <script src="./js/menu.js"></script>
