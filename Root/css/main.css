@@ -12,7 +12,6 @@
     --accent-main: #01d68f;
     --accent-dark:#1ba175;
     --accent-darker: #3d6641;
-
 }
 
 body{
@@ -149,6 +148,7 @@ main{
 h1{
     font-size: 6vw;
 }
+
 
 @media only screen and (max-width: 1024px){
     .navbar{

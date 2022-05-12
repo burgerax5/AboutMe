@@ -63,6 +63,7 @@ a:hover{
 @media only screen and (max-width: 1024px){
     .burgerax3 h1{
         font-size: 15vw;
+        margin: 10px;
     }
 
     li{

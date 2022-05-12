@@ -1,8 +1,8 @@
 const onClick = function(){
     let order = ['steamLink', 'malLink', 'githubLink', 'leetcodeLink', 'discordLink']
     let links = ['https://steamcommunity.com/id/burgerax3', 'https://myanimelist.net/profile/burgerax3', 'https://github.com/burgerax5', 'https://leetcode.com/burgerax3/', 'https://discord.gg/D9JYv5e']
+    modal.style.height = '100vh';
     modal.style.visibility = 'visible';
-
     for(let i = 0; i < order.length; i++){
         if (order[i] == this.id){
             modalLink.innerHTML = links[i]
@@ -16,6 +16,7 @@ const confirmClick = function(){
         location.href = modalLink.innerHTML;
     }
     else{
+        modal.style.height = '0vh';
         modal.style.visibility = 'hidden';
     }
 }

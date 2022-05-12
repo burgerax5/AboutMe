@@ -3,7 +3,7 @@
     src: url('Minecraft.ttf');
 }
 
-.contact-list{
+.contact-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -11,42 +11,41 @@
     width: 100%;
 }
 
-.contact-list-item{
+.contact-list-item {
     border: 1px solid var(--bg-light);
-    padding: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: 5px;
+    padding: 20px;
     transition: 0.4s ease;
     text-decoration: none;
     color: white;
 }
 
-.contact-list-item:hover{
+.contact-list-item:hover {
     border: 1px solid var(--accent-dark);
     cursor: pointer;
     background-color: rgb(49, 49, 49);
 }
 
-.contact-list-item:hover .contact-list-item-img-box img{
+.contact-list-item:hover .contact-list-item-img-box img {
     filter: invert(65%) sepia(40%) saturate(4148%) hue-rotate(145deg) brightness(100%) contrast(99%);
 }
 
-.contact-list-item-img-box{
+.contact-list-item-img-box {
     grid-column: 1/2;
     height: 128px;
-    width: auto;
+    width: 128px;
     justify-self: center;
 }
 
-.contact-list-item-info-box{
+.contact-list-item-info-box {
     height: 100%;
-    border-left: 2px solid var(--bg-light);
     grid-column: 2/5;
 }
 
-.contact-list-item-info-text{
+.contact-list-item-info-text {
     text-align: left;
     margin-left: 5%;
     display: flex;
@@ -54,28 +53,28 @@
     overflow-wrap: break-word;
 }
 
-.contact-list-item-info-text .description{
+.contact-list-item-info-text .details {
+    font-size: large;
     color: grey;
-    font-size: 65%;
     font-family: minecraft;
 }
 
-.modal{
+.modal {
     visibility: hidden;
-    position: absolute;
+    width: 100vw;
+    height: 0vh;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.modal-content{
+.modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -86,18 +85,18 @@
     gap: 30px;
 }
 
-.modal-link{
+.modal-link {
     color: grey;
     font-size: 18px;
     overflow: hidden;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: space-evenly;
 }
 
-.modal-btn{
+.modal-btn {
     outline: none;
     border: none;
     font-family: vcr;
@@ -108,31 +107,57 @@
     cursor: pointer;
 }
 
-#yesBtn{
+#yesBtn {
     background-color: var(--accent-main);
 }
 
-#yesBtn:hover{
+#yesBtn:hover {
     background-color: var(--accent-darker);
 }
 
-#noBtn{
+#noBtn {
     background-color: var(--bg-darker);
 }
 
-#noBtn:hover{
+#noBtn:hover {
     background-color: var(--bg-light);
 }
 
-@media only screen and (max-width: 1024px){
-    .contact-list{
+@media only screen and (max-width: 1024px) {
+    .contact-list {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
-        width: 80%;
+        width: 100%;
     }
 
-    .modal-link{
+    .modal-link {
         overflow: scroll;
+    }
+
+    .title {
+        font-size: 24pt;
+    }
+
+    .contact-list-item-info-text .details {
+        font-size: large;
+    }
+
+    .contact-list-item-img-box {
+        height: 100px;
+        width: 100px;
     }
 }
 
+@media only screen and (max-width: 375px) {
+    .title {
+        font-size: 16pt;
+    }
+
+    .contact-list-item-info-text .details {
+        font-size: small;
+    }
+
+    .modal-content {
+        width: 75%;
+    }
+}
